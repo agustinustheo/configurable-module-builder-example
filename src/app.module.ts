@@ -3,6 +3,10 @@ import { ApiModule } from './api-module/api.module';
 import { EnvProxyModule } from './env-proxy-module/env-proxy.module';
 
 @Module({
-  imports: [ApiModule, EnvProxyModule],
+  imports: [ApiModule, EnvProxyModule.register({
+    exclude: [
+      "DATA"
+    ]
+  })],
 })
 export class AppModule {}
