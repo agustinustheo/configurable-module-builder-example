@@ -1,4 +1,5 @@
 import { Global, Module } from '@nestjs/common';
+import { ConfigurableModuleClass } from './env-proxy.module-definition';
 import { EnvProxyService } from './env-proxy.service';
 
 @Global()
@@ -6,4 +7,4 @@ import { EnvProxyService } from './env-proxy.service';
   providers: [EnvProxyService],
   exports: [EnvProxyService],
 })
-export class EnvProxyModule {}
+export class EnvProxyModule extends ConfigurableModuleClass {}

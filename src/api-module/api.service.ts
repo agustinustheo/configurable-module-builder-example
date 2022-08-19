@@ -6,6 +6,6 @@ export class ApiService {
   constructor(private readonly envProxy: EnvProxyService) {}
 
   getHello(): string {
-    return this.envProxy.env.DATA;
+    return this.envProxy.env.DATA ?? this.envProxy.env.DATA2;
   }
 }
