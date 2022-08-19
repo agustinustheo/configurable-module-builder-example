@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ApiModule } from './api-module/api.module';
+import { EnvProxyModule } from './env-proxy-module/env-proxy.module';
 
 @Module({
-  imports: [ApiModule],
+  imports: [ApiModule, EnvProxyModule],
 })
 export class AppModule {}
